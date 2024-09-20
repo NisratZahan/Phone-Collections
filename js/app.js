@@ -9,8 +9,20 @@ const loadPhones=async(searchText)=>{
 
 const displayPhones=phones=>{
     const phoneContainer=document.getElementById('phone-container');
-    // clear container cards before adding new cards
+    // clear container cards before adding new cards(to clear extisting elements)
     phoneContainer.textContent='';
+    // display show all button if there are more than sliced number elements
+    const showContainer=document.getElementById('show-all');
+    if(phones.length > 10)
+    {
+showContainer.classList.remove('hidden');
+    }
+    else{
+        showContainer.classList.add('hidden');
+    }
+
+    // to fix length 
+   phones=phones.slice(0,10);
     //step 1: to display the component using loop
     phones.forEach(phones => {
     console.log(phones);
@@ -35,14 +47,33 @@ const displayPhones=phones=>{
     // step 4:
     phoneContainer.appendChild(phoneCards);
 });
+// stop toggle-spiner
+toggleSpinner(false);
 }
 
 // manage search button
 
-const searchClick=(phones)=>{
+const searchClick=()=>{
    const searchFeild=document.getElementById('search-field');
    const searchText=searchFeild.value;
     console.log(searchText);
     loadPhones(searchText);
+    toggleSpinner(true);
+}
+// manage search button recap
+// const searchClick2=()=>{
+//    const searchFeild=document.getElementById('search-field2');
+//    const searchText=searchFeild.value;
+//     loadPhones(searchText);
+// }
+// togglespinner
+const toggleSpinner=(isLoading)=>{
+    const loadSpinner=document.getElementById('loading-spinner');
+    if(isLoading){
+        loadSpinner.classList.remove('hidden');
+    }
+    else{
+        loadSpinner.classList.add('hidden');
+    }
 }
 // loadPhones();

@@ -15,19 +15,37 @@
 </header>
 <!-- content main -->
     <main class="container mx-auto mt-5">
-        <!-- search menu -->
+         <!-- search Field -->
          <section class="bg-gray-100 p-4 m-4">
             <input id="search-field" 
             type="text"
             placeholder="search here"
             class="input input-bordered input-info w-full max-w-xs" />
             <button onclick="searchClick()" class="btn btn-active btn-accent">Search</button>
+             <!-- another search Field -->
+            <!-- <input id="search-field2" 
+            type="text"
+            placeholder="search here"
+            class="input input-bordered input-info w-full max-w-xs" />
+            <button onclick="searchClick2()" class="btn btn-info ">Search</button> -->
          </section>
+         
+          
         <!-- search items -->
-        <section >
-            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <section class="container my-8">
+            <!-- loader  -->
+             <div class="text-center my-40 hidden" id="loading-spinner">
+                <span 
+                 class="loading loading-spinner text-lg text-primary"></span>
+             </div>
+             <!-- all phones -->
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
 
             </div>
+            <!-- show All button -->
+             <div id="show-all" class="hidden text-center my-8">
+                <button   class="btn btn-accent">ShowAll</button>
+             </div>
         </section>
     </main>
     <!-- app js -->
