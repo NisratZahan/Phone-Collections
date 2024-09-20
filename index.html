@@ -14,8 +14,17 @@
     <h1>Welcome, to Mobile World</h1>
 </header>
 <!-- content main -->
-    <main>
-        <section class="">
+    <main class="container mx-auto mt-5">
+        <!-- search menu -->
+         <section class="bg-gray-100 p-4 m-4">
+            <input id="search-field" 
+            type="text"
+            placeholder="search here"
+            class="input input-bordered input-info w-full max-w-xs" />
+            <button onclick="searchClick()" class="btn btn-active btn-accent">Search</button>
+         </section>
+        <!-- search items -->
+        <section >
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
             </div>
