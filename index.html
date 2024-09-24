@@ -44,13 +44,32 @@
             </div>
             <!-- show All button -->
              <div id="show-all" class="hidden text-center my-8">
-                <button   class="btn btn-accent">ShowAll</button>
+                <button  class="btn btn-accent" onclick="handleShowAll()">ShowAll</button>
              </div>
+        </section>
+    <!-- Show details modal -->
+        <section>
+            <!-- You can open the modal using ID.showModal() method -->
+            
+<dialog id="show_details_modal" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <h2 id="phone-name" class="text-lg font-bold"></h2>
+   <div id="phonedetails-comment">
+
+   </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
         </section>
     </main>
     <!-- app js -->
      <script src="js/app.js"></script>
-    <!-- JS link -->
+   
     
 </body>
 </html>
